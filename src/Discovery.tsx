@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 import unkleKay from "./assets/unkleKay.jpg";
-import lasuLogo from "./assets/lasuLogo.JPG";
-import mbaLogo from "./assets/mbaLogo.JPG";
+import lasuLogo from "./assets/lasu_logo.jpg";
+import mbaLogo from "./assets/mba_logo.jpg";
 import image from "./assets/image.png";
 
 // Define the colors used in previous pages for brand consistency
