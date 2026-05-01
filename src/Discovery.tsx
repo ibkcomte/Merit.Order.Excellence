@@ -13,6 +13,7 @@ const colors = {
   accentGold: "#8B6508", // From your MBA Toolkit page
 };
 
+
 interface SolutionCardProps {
   title: string;
   description: string;
