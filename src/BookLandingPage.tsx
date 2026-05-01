@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useState } from "react";
+import { motion} from "framer-motion";
 import { BookOpen, Edit3 } from "lucide-react";
 import { Users } from 'lucide-react';
 const BookLandingPage = () => {
   // Editable state for the book cover
   const [title, setTitle] = useState("LASU MBA");
-  const [subtitle, setSubtitle] = useState("TRUSTED TEAM");
-  const [author, setAuthor] = useState("By M.O.E 2026");
+  const [subtitle] = useState("TRUSTED TEAM");
+  const [author] = useState("By M.O.E 2026");
 
   // Colors based on your preference
   const colors = {

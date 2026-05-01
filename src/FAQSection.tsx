@@ -141,7 +141,7 @@ const FAQSection: React.FC = () => {
           rotate: [0, -15, 0],
         }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="absolute bottom-0 -left-20 w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 pointer-events-none"
+        className="absolute bottom-0 -left-20 w-125 h-125 rounded-full blur-[120px] opacity-10 pointer-events-none"
         style={{ backgroundColor: colors.accentGold }}
       />
 

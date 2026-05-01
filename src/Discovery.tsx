@@ -108,7 +108,7 @@ const Discovery: React.FC = () => {
               alt="VC"
               className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/40 to-transparent" />
           </div>
 
           {/* Content Container */}
@@ -145,7 +145,7 @@ const Discovery: React.FC = () => {
             </div>
 
             {/* Inset kay Portrait Image */}
-            <div className="w-48 h-64 md:w-64 md:h-80 flex-shrink-0 rounded-2xl overflow-hidden border-4 border-white/10 shadow-lg">
+            <div className="w-48 h-64 md:w-64 md:h-80 shrink-0 rounded-2xl overflow-hidden border-4 border-white/10 shadow-lg">
               <img
                 src={unkleKay}
                 alt="Portrait"
