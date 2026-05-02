@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, HelpCircle, MessageSquare } from "lucide-react";
+import { ChevronDown, HelpCircle, MessageSquare, Play } from "lucide-react";
 
 // Theme consistency colors
 const colors = {
@@ -189,15 +189,48 @@ const FAQSection: React.FC = () => {
           <p className="text-gray-500 mb-6 font-medium">
             Still have questions?
           </p>
-          <a
-            href="https://chat.whatsapp.com/CoHYF84yimRHkZoodE92lU?mode=gi_t" // Optimized link format
-            className="inline-flex items-center gap-3 px-10 py-4 rounded-full text-white font-black transition-all hover:shadow-2xl active:scale-95"
-            style={{ backgroundColor: "#4b5320"}}
-          >
-            Contact Support
-          </a>
+          <div className="flex justify-center items-center p-8">
+      <motion.a
+        href="https://chat.whatsapp.com/CoHYF84yimRHkZoodE92lU?mode=gi_t"
+        target="_blank"
+        rel="noopener noreferrer"
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ translateY: "4px" }} // Moves down when clicked to simulate a press
+        className="group relative inline-flex items-center gap-4 px-10 py-4 rounded-2xl font-black text-white tracking-widest transition-all"
+        style={{
+          backgroundColor: colors.armyGreen,
+          // This creates the "3D" effect seen in your image
+          boxShadow: `0 6px 0 0 ${colors.deepBrown}`,
+        }}
+      >
+        <span className="text-lg md:text-xl uppercase">
+          Contact Support
+        </span>
+        
+        {/* The White Triangle Icon from your image */}
+        <div className="bg-white p-1 rounded-sm flex items-center justify-center">
+          <Play 
+            fill="currentColor" 
+            className="w-4 h-4 text-[#8B6508]" 
+            style={{ color: colors.armyGreen }}
+          />
+        </div>
+
+        {/* Optional: Subtle glow effect to make it "catchy" */}
+        <div className="absolute inset-0 rounded-2xl bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+      </motion.a>
+    </div>
         </div>
       </div>
+      <footer className="px-8 lg:px-16 py-8 text-sm text-gray-400 flex flex-col md:flex-row justify-between border-t border-gray-100">
+        <p>© 2025 Team M.O.E All rights reserved.</p>
+        <div className="flex gap-6 mt-4 md:mt-0">
+          <span className="cursor-pointer hover:text-gray-600">
+            Documentation
+          </span>
+          <span className="cursor-pointer hover:text-gray-600">License</span>
+        </div>
+      </footer>
     </section>
   );
 };

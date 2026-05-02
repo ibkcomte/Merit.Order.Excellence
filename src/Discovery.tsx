@@ -45,25 +45,26 @@ const SolutionCard: React.FC<SolutionCardProps> = ({
 
 const Discovery: React.FC = () => {
   const solutions = [
-    {
-      title: "Payment of Important Fees",
-      description:
-        "visit the school portal to pay the required fees like Acceptance Fee, Medical Fee, LACACA Fee and Library Fee.",
+     {
+      title: "Familiarize yourself ",
+      description: "Class Venues, Facility Office, Library, Amazing CourseMate etc",
       icon: lasuLogo,
     },
+    {
+      title: "Activate Portal",
+      description: "click on the contact Support and we will run you through the process",
+      icon: mbaLogo,
+    },
+   
     {
       title: "School fee payment",
       description: "The school fee payment can be made in two (2) installments of 70% and 30%.",
       icon: image,
     },
     {
-      title: "Activate Portal",
-      description: "click on the Whatsapp Link and we will run you through the process",
-      icon: mbaLogo,
-    },
-    {
-      title: "Familiarize yourself ",
-      description: "Class Venues, Facility Office, Library etc",
+      title: "Other Fees",
+      description:
+        "visit the school portal to pay the required fees like Acceptance Fee, Medical Fee, LACACA Fee and Library Fee.",
       icon: lasuLogo,
     },
   ];
@@ -166,7 +167,7 @@ const Discovery: React.FC = () => {
           className="flex items-center gap-2 font-bold transition-all hover:gap-4"
           style={{ color: colors.armyGreen }}
         >
-          Important First Step
+          Need An Assistant?
           <span className="text-2xl">→</span>
         </a>
       </div>

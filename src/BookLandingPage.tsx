@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 import { BookOpen, Edit3 } from "lucide-react";
-import { Users } from 'lucide-react';
+import { Play } from "lucide-react";
 const BookLandingPage = () => {
   // Editable state for the book cover
-  const [title, setTitle] = useState("LASU MBA");
-  const [subtitle] = useState("TRUSTED TEAM");
-  const [author] = useState("By M.O.E 2026");
+  const [title ] = useState("LASU MBA");
+  const [subtitle] = useState("THE EXECUTIVES");
+  const [author] = useState("M.O.E 2025");
 
   // Colors based on your preference
   const colors = {
@@ -52,24 +52,6 @@ const BookLandingPage = () => {
             M.O.E
           </span>
         </div>
-        <div className="hidden md:flex gap-8 font-medium">
-          {/* <a href="#" className="hover:opacity-70 transition-opacity">
-            Features
-          </a>
-          <a href="#" className="hover:opacity-70 transition-opacity">
-            Preview
-          </a> */}
-         <a
-  href="https://chat.whatsapp.com/CoHYF84yimRHkZoodE92lU?mode=gi_t"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-3 px-8 py-4 rounded-xl text-white font-black uppercase tracking-tight transition-all shadow-xl hover:scale-105 active:scale-95"
-  style={{ backgroundColor: "#4b5320" }} // Using your Army Green
->
-  <Users size={20} />
-  <span>To Get More Information</span>
-</a>
-        </div>
       </nav>
 
       {/* --- MAIN CONTENT --- */}
@@ -97,26 +79,39 @@ const BookLandingPage = () => {
           {/* EDITABLE CONTROLS */}
           <div className="p-6 bg-white/80 backdrop-blur-md rounded-2xl border border-gray-100 shadow-sm space-y-4 max-w-sm">
             <div className="flex items-center gap-2 mb-2 text-sm font-semibold uppercase tracking-wider text-gray-400">
-              <Edit3 size={14} /> Merit Order Responsibility
+              <Edit3 size={14} /> Merit Order Excellence.
             </div>
-            <input
-              type="text"
-              value={title}
-              onChange={(e) => setTitle(e.target.value.toUpperCase())}
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 outline-none transition-all"
-              style={{ backgroundColor: "#4b5320" }}
-              placeholder="Main Title"
-            />
-           <a
-  href="https://chat.whatsapp.com/CoHYF84yimRHkZoodE92lU?mode=gi_t"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-3 px-8 py-4 rounded-xl text-white font-black uppercase tracking-tight transition-all shadow-xl hover:scale-105 active:scale-95"
-  style={{ backgroundColor: "#4b5320" }} // Using your Army Green
->
-  <Users size={20} />
-  <span>Join WhatsApp Group</span>
-</a>
+            <div className="flex justify-center items-center p-8">
+              <motion.a
+                href="https://chat.whatsapp.com/CoHYF84yimRHkZoodE92lU?mode=gi_t"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ translateY: "4px" }} // Moves down when clicked to simulate a press
+                className="group relative inline-flex items-center gap-4 px-10 py-4 rounded-2xl font-black text-white tracking-widest transition-all"
+                style={{
+                  backgroundColor: colors.armyGreen,
+                  // This creates the "3D" effect seen in your image
+                  boxShadow: `0 6px 0 0 ${colors.deepBrown}`,
+                }}
+              >
+                <span className="text-lg md:text-xl uppercase">
+                  Contact Support
+                </span>
+
+                {/* The White Triangle Icon from your image */}
+                <div className="bg-white p-1 rounded-sm flex items-center justify-center">
+                  <Play
+                    fill="currentColor"
+                    className="w-4 h-4 text-[#8B6508]"
+                    style={{ color: colors.armyGreen }}
+                  />
+                </div>
+
+                {/* Optional: Subtle glow effect to make it "catchy" */}
+                <div className="absolute inset-0 rounded-2xl bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </motion.a>
+            </div>
           </div>
         </motion.div>
 
@@ -152,7 +147,7 @@ const BookLandingPage = () => {
                 className="my-4 px-3 py-1 text-xs font-bold text-white rounded-full"
                 style={{ backgroundColor: colors.accentGreen }}
               >
-                WELCOME
+                WELCOMES
               </div>
 
               <h3 className="text-4xl font-light tracking-tighter text-center text-gray-800">
@@ -184,35 +179,8 @@ const BookLandingPage = () => {
           />
         </div>
       </main>
-<a
-  href="https://chat.whatsapp.com/CoHYF84yimRHkZoodE92lU?mode=gi_t"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center gap-2 font-bold transition-colors"
-  style={{ color: "#3d2b1f" }} // Using your Deep Brown
->
-  <span className="hover:underline underline-offset-4">Join our Community</span>
-  <svg 
-    viewBox="0 0 24 24" 
-    width="16" 
-    height="16" 
-    stroke="currentColor" 
-    strokeWidth="3" 
-    fill="none"
-  >
-    <path d="M5 12h14M12 5l7 7-7 7" />
-  </svg>
-</a>
+
       {/* --- FOOTER SECTION --- */}
-      <footer className="px-8 lg:px-16 py-8 text-sm text-gray-400 flex flex-col md:flex-row justify-between border-t border-gray-100">
-        <p>© 2026 Team M.O.E All rights reserved.</p>
-        <div className="flex gap-6 mt-4 md:mt-0">
-          <span className="cursor-pointer hover:text-gray-600">
-            Documentation
-          </span>
-          <span className="cursor-pointer hover:text-gray-600">License</span>
-        </div>
-      </footer>
 
       {/* Custom Styles for 3D */}
       <style>{`
